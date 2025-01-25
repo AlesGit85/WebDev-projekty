@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+<!-- Toto je hlavní rozdělení obrazovky -->
+<div class="flex h-screen">
+    <!-- Levý panel (boční lišta) -->
+    <aside class="bg-gray-50 w-1/5 p-4 border-r">
+        <!-- Hlavička s logem -->
+        <div class="flex items-center gap-4 mb-8">
+            <a href="#" class="flex">
+                <img class="h-12" src="./img/Group 24.avif" alt="Evidence letů">
+                <p class="p-2 font-bold text-lg">Evidence letů</p>
+            </a>
+        </div>
+
+        <!-- Navigace -->
+        <nav class="flex flex-col gap-2">
+            <h3 class="text-sm uppercase font-bold p-4">Navigace</h3>
+
+            <!-- Sekce: Lety -->
+            <div class="pl-4">
+                <h6 class="text-sm text-gray-600">.: Lety :.</h6>
+            </div>
+            <div class="flex items-center p-2 hover:bg-red-600 hover:text-white rounded-xl">
+                <a href="#" class="flex pl-2 gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                    Přehled
+                </a>
+            </div>
+            <!-- Přidat další navigační odkazy podle potřeby -->
+        </nav>
+    </aside>
+
+    <!-- Pravý panel (hlavní obsah) -->
+    <main class="flex-1 bg-white">
+        <header class="flex justify-between p-4 border-b">
+            <h1 class="font-medium text-2xl">Přehled</h1>
+        </header>
+        <div class="p-4">
+            <p>Zde bude hlavní obsah stránky.</p>
+        </div>
+    </main>
+</div>
+</body>
+</html>
