@@ -6,13 +6,41 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<!-- Toto je definice vlastních barev -->
+
+
+<!-- Toto je boční lišta -->
 <div class="flex h-screen">
-    <aside class="bg-red-50 w-1/5 p-4 border-r">
+    <aside class="bg-gray-50 w-1/6 pt-4 border-r-2 shadow-lg">
+        <!-- Toto je hlavička s logem -->
+        <section class="px-4 Group flex items-center">
+            <a href="#" class="flex">
+            <img class="h-12" src="./img/Group 24.avif" alt="Evidence letů">
+            <p class="p-2 font-bold text-lg">Evidence letů</p>
+             </a>
+        </section>
+        <!-- Toto je konec hlavičky s logem -->
+
  <nav>
-        <h6 class="text-sm uppercase">Navigace</h6>
-            <a href="#">Lety</a>
-                <a href="#">Přehled</a>
-                <a href="#">Přidat let</a>
+        <h3 class="text-sm uppercase font-bold p-4">Navigace</h3>
+            <div class="pl-4"><h6 class="text-sm text-gray-600">.: Lety :.</h6></div>
+
+        <div class="flex items-center p-2 hover:bg-red-600 hover:text-white active:bg-red-400 active:text-white active:font-bold">
+            <a href="#" class="flex pl-2 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            Přehled</a>
+        </div>
+        <div class="flex items-center p-2 hover:bg-red-600 hover:text-white active:bg-red-400 active:text-white active:font-bold">
+            <a href="#" class="flex pl-2 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-plus"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M9 14h6"/><path d="M12 17v-6"/></svg>
+            Přidat let</a>
+        </div>
+        <div class="flex items-center p-2 hover:bg-red-600 hover:text-white active:bg-red-400 active:text-white active:font-bold">
+            <a href="#" class="flex pl-2 gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-round-plus"><path d="M2 21a8 8 0 0 1 13.292-6"/><circle cx="10" cy="8" r="5"/><path d="M19 16v6"/><path d="M22 19h-6"/></svg>
+            Přiřadit let</a>
+        </div>
+
 
 
 

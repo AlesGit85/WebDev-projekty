@@ -8,26 +8,23 @@
 </head>
 <body>
 
-  <main class="flex justify-center items-center h-screen">
+  <main class="flex justify-center items-center h-screen bg-gray-300">
 
-  <section class="border border-gray-400 shadow-lg rounded-xl p-8 bg-gray-200">
-<h3 class="text-lg font-bold">Přihlášení do evidence letů</h3>
-    <form>
-    <div class="p-4">
-      <label>Přihlašovací jméno:</label><br>
-      <input type="text"class="border border-grey-800 shadow-lg" placeholder=" Přihlašovací jméno">
+  <section class="border border-gray-400 shadow-2xl rounded-xl p-8 bg-gray-200">
+<h3 class="text-lg font-bold text-#f47525">Přihlášení do evidence letů</h3>
+    <form action="#" method="post" class="text-center">
+    <div class="py-4">
+      <input id="user" name="user" type="text" required class="border border-grey-800 shadow-lg rounded-xl text-center" placeholder="Přihlašovací jméno">
     </div>
-    <div class="p-4">
-      <label>Přihlašovací heslo:</label><br>
-      <input type="password" class="border border-grey-800 shadow-lg" placeholder=" Přihlašovací heslo"><br>
-      <button class="bg-gray-800 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded mt-4">
-        <input type="button" value="Odeslat">
-        </button>
+    <div>
+      <input id="pass" name="pass" type="password" required class="border border-grey-800 shadow-lg rounded-xl text-center" placeholder="Přihlašovací heslo"><br>
+      <button type="submit" class="bg-gray-800 hover:bg-gray-500 text-white font-bold py-2 px-4 rounded-full mt-4">Odeslat</button>
     </div>
     </form>
 
   </section>
 
+</option>
   </main>
     
 </body>
