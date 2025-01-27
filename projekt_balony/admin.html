@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administrace - Evidence letu balonem</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -31,7 +32,7 @@
         </div>
 
         <div class="flex items-center p-2 hover:bg-red-600 hover:text-white active:bg-red-400 active:text-white active:font-bold rounded-xl">
-            <a href="#" class="flex pl-2 gap-2">
+            <a href="./admin.html" class="flex pl-2 gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
             Přehled</a>
         </div>
@@ -76,15 +77,16 @@
 <div class="flex">
 <div class="flex bg-zinc-100 items-center border rounded-l-full pl-2">
     <svg class="text-zinc-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-    <input placeholder="Vyhledávání..." type="search" class="bg-zinc-100 focus:outline-none"></div>
+    <input placeholder=" Vyhledávání..." type="search" class="bg-zinc-100 focus:outline-none"></div>
 <button type="submit" class="bg-red-600 items-center p-2 rounded-r-full">
     <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
 </button>
 </div>
 
 <div class="flex items-center gap-2 px-2">
-    <div>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-user-round"><path d="M18 20a6 6 0 0 0-12 0"/><circle cx="12" cy="10" r="4"/><circle cx="12" cy="12" r="10"/></svg></div>
+    <div class="flex items-center gap-x-6">
+        <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="">
+    </div>
     <div>
         <p class="text-gray-600 font-semibold">John Doe</p>
         <p class="text-gray-400 text-sm font-thin">Administrator</p>
@@ -94,8 +96,96 @@
 
     <!-- Pravý panel (hlavní obsah) -->
 
-        <div class="p-4">
-            <p>Zde bude hlavní obsah stránky.</p>
+        <!-- Pravý panel (filtrace) -->
+
+        <div class="p-2 items-center justify-center">
+            <div class="flex items-center">
+                <svg class=mr-2 xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-up"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+            <p class="text-sm text-gray-500 mr-2">Seřadit dle</p>
+            <p class="text-sm font-semibold">čísla objednávky:</p>
+            <form action="">
+                <select class="text-sm">
+                    <option value="#">nevybráno</option>
+                    <option value="#">vzestupně</option>
+                    <option value="#">sestupně</option>
+                </select>
+            </form>
+            <p class="text-sm font-semibold ml-4">termínu letu:</p>
+            <form action="">
+                <select class="text-sm">
+                    <option value="#">nevybráno</option>
+                    <option value="#">vzestupně</option>
+                    <option value="#">sestupně</option>
+                </select>
+            </form>
+            </div>
+        </div>
+
+    <div class="grid grid-cols-3 gap-4 p-4">
+
+       
+            <!-- Pravý panel (dlaždice) -->
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 986</p>
+                <p class="text-gray-500 text-sm">Termín: 08.04.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Hradec Králové</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Hradec Králové</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-500">Jane Doe</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class="btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 items-center">
+                <div class="flex justify-between gap-2 w-full items-center">
+                <p class=" font-bold">Číslo objednávky: 357</p>
+                <p class="text-gray-500 text-sm">Termín: 11.04.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 w-full items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Rychnov n. Kněžnou</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Rychnov n. Kněžnou</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-500">William Doe</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class="btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 454</p>
+                <p class="text-gray-500 text-sm">Termín: 01.05.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 w-full items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Pardubice</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Pardubice</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-500">Jane Doe</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class="btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 w-full items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 544</p>
+                <p class="text-gray-500 text-sm">Termín: 08.04.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Kunětická hora</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Kunětická hora</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-900 font-bold">--- nepřiřazeno ---</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class=" btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
         </div>
     </main>
 </div>
