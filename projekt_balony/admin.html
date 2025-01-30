@@ -8,11 +8,11 @@
 </head>
 
 <body>
-<!-- Toto je hlavní rozdělení obrazovky -->
+<!-- Toto je hlavní rozdělení obrazovky --> 
 <div class="flex h-screen">
 
     <!-- Levý panel (boční lišta) -->
-    <aside class="bg-gray-50 w-1/5 p-4 border-r">
+    <aside class="fixed top-0 left-0 h-screen w-[20%] bg-gray-50 p-4 border-r overflow-y-auto">
 
         <!-- Hlavička s logem -->
         <div class="flex items-center gap-4 mb-8">
@@ -70,20 +70,21 @@
     </aside>
 
     <!-- Pravý panel (hlavička) -->
-    <main class="flex-1 bg-white">
-        <header class="flex justify-between p-4 border-b">
+    <main class="ml-[20%] flex-1 bg-white p-6">
+        <header class="flex justify-between p-4 bg-white border-b">
             <h1 class="font-medium text-2xl">Přehled</h1>
 
-<div class="flex">
-<div class="flex bg-zinc-100 items-center border rounded-l-full pl-2">
+    <div class="flex">
+    <div class="flex bg-zinc-100 items-center border rounded-l-full pl-2">
     <svg class="text-zinc-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
     <input placeholder=" Vyhledávání..." type="search" class="bg-zinc-100 focus:outline-none"></div>
-<button type="submit" class="bg-red-600 items-center p-2 rounded-r-full">
+    <button type="submit" class="bg-red-600 items-center p-2 rounded-r-full">
     <svg class="text-white" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-</button>
-</div>
+    </button>
+    </div>
 
-<div class="flex items-center gap-2 px-2">
+    <div class="flex items-center gap-2 px-2">
+    <svg class="text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"/><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg>
     <div class="flex items-center gap-x-6">
         <img class="object-cover w-8 h-8 rounded-full" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="">
     </div>
@@ -92,13 +93,14 @@
         <p class="text-gray-400 text-sm font-thin">Administrator</p>
     </div>
     </div>
+
         </header>
 
     <!-- Pravý panel (hlavní obsah) -->
 
         <!-- Pravý panel (filtrace) -->
 
-        <div class="p-2 items-center justify-center">
+        <div class="p-2 items-center justify-center border-b bg-white sticky top-0">
             <div class="flex items-center">
                 <svg class=mr-2 xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-down-up"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
             <p class="text-sm text-gray-500 mr-2">Seřadit dle</p>
@@ -121,10 +123,9 @@
             </div>
         </div>
 
-    <div class="grid grid-cols-3 gap-4 p-4">
+        <!-- Pravý panel (dlaždice) -->
 
-       
-            <!-- Pravý panel (dlaždice) -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
 
             <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 items-center">
                 <div class="flex justify-between gap-2 items-center">
@@ -186,8 +187,57 @@
             </div>
             </div>
 
-        </div>
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 w-full items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 855</p>
+                <p class="text-gray-500 text-sm">Termín: 18.07.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Kunětická hora</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Kunětická hora</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-900 font-bold">--- nepřiřazeno ---</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class=" btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 w-full items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 278</p>
+                <p class="text-gray-500 text-sm">Termín: 11.05.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Hradec Králové</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Hradec Králové</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-900 font-bold">--- nepřiřazeno ---</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class=" btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+            <div class="p-4 border rounded-xl shadow-lg hover:bg-red-50 w-full items-center">
+                <div class="flex justify-between gap-2 items-center">
+                <p class=" font-bold">Číslo objednávky: 954</p>
+                <p class="text-gray-500 text-sm">Termín: 17.07.2025</p>
+                </div>
+                <div class="flex justify-between gap-2 items-center">
+                    <p class="text-gray-800">Odkud:</p><p class="text-gray-500 text-sm">Rychnov n. Kněžnou</p>
+                    <p class="text-gray-800">Kam:</p><p class="text-gray-500 text-sm">Rychnov n. Kněžnou</p>
+                </div>
+                <p>Pilot: <a href="#" class="text-red-900 font-bold">--- nepřiřazeno ---</a></p>
+            <div class="text-center pt-2">
+                <button type="submit" class=" btn bg-red-600 hover:bg-gray-500 text-white text-sm py-2 px-4 rounded-full">Detail</button>
+            </div>
+            </div>
+
+    </div>
     </main>
 </div>
+
+
+<script src="script.js"></script>
+
 </body>
 </html>
