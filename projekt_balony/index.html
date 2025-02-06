@@ -12,7 +12,7 @@
   <section class="border border-gray-400 shadow-2xl rounded-xl p-8 bg-gray-200 flex flex-col items-center">
   <img class="h-12" src="./img/Group 24.avif" alt="Evidence letů">
   <h3 class="text-lg font-bold">Přihlášení do evidence letů</h3>
-    <form action="#" method="post" class="text-center">
+    <form action="#" method="post" class="text-center" onsubmit="checkLogin(event)">
     <div class="py-4">
       <input id="user" name="user" type="text" required class="border border-grey-800 shadow-lg rounded-xl text-center" placeholder="Přihlašovací jméno">
     </div>
@@ -22,10 +22,15 @@
     </div>
     </form>
 
+    <p id="error-msg" class="font-bold"></p> <!-- Zde se zobrazí chybová hláška -->
+
+
   </section>
 
 </option>
   </main>
     
+  <script src="script.js"></script>
+
 </body>
 </html>
